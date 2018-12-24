@@ -1,8 +1,15 @@
 {
   "name": "piryazevbg",
-  "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.4",
+  "description": "Game - BrainGames",
+  "keywords": [
+    "game",
+    "training",
+    "iq",
+    "bran",
+    "intelligence"
+  ],
+  "description": "Set of mini games for training logic and intellect",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
@@ -23,6 +30,6 @@
     "@babel/preset-env": "^7.2.3"
   },
   "dependencies": {
-    "publish": "^0.6.0"
+    "readline-sync": "^1.4.9"
   }
 }
