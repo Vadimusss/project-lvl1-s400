@@ -1,6 +1,6 @@
 {
   "name": "piryazevbg",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "keywords": [
     "game",
     "training",
@@ -11,7 +11,8 @@
   "description": "Set of mini games for training logic and intellect",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
