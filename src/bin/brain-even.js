@@ -1,8 +1,5 @@
 #!/usr/bin/env node
-import { greeting, askQuestion } from '..';
+import startGame from '../startGame';
+import braneEven from '../games/brainEven';
 
-console.log('Welcome to the Brain Games!');
-console.log('Answer "yes" if number even otherwise answer "no".');
-
-const name = greeting();
-askQuestion(name);
+startGame(braneEven);
