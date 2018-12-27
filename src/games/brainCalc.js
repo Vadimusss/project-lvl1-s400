@@ -1,30 +1,40 @@
-import { gameData } from '../gameData';
+import { cons } from 'hexlet-pairs';
+import { randomNum } from '../utils';
+import startGame from '../startGame';
+
+const task = 'What is the result of the expression?';
+const countOfQuestions = 3;
 
 export default () => {
-  let operator = '';
-  let correctAnswer = '';
-  const task = 'What is the result of the expression?';
-  const random = Math.random();
-  const operandA = Math.round(Math.random() * 100);
-  const operandB = Math.round(Math.random() * 100);
+  const gameData = () => {
+    let operator = '';
+    let correctAnswer = '';
+    const operandA = randomNum(1, 100);
+    const operandB = randomNum(1, 100);
 
-  if (random < 0.33) {
-    operator = '+';
-  } else if (random > 0.66) {
-    operator = '-';
-  } else {
-    operator = '*';
-  }
+    switch (randomNum(1, 3)) {
+      case 1:
+        operator = '+';
+        break;
+      case 2:
+        operator = '-';
+        break;
+      default:
+        operator = '*';
+    }
 
-  const question = `${operandA} ${operator} ${operandB}`;
+    const question = `${operandA} ${operator} ${operandB}`;
 
-  if (operator === '+') {
-    correctAnswer = operandA + operandB;
-  } else if (operator === '-') {
-    correctAnswer = operandA - operandB;
-  } else {
-    correctAnswer = operandA * operandB;
-  }
+    if (operator === '+') {
+      correctAnswer = operandA + operandB;
+    } else if (operator === '-') {
+      correctAnswer = operandA - operandB;
+    } else {
+      correctAnswer = operandA * operandB;
+    }
 
-  return gameData(task, question, String(correctAnswer));
+    return cons(question, String(correctAnswer));
+  };
+
+  startGame(task, countOfQuestions, gameData);
 };
