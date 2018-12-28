@@ -24,7 +24,7 @@ export default () => {
     const question = `${numberOne} ${numberTwo}`;
     const correctAnswer = String(gcd(numberOne, numberTwo));
 
-    return cons(question, String(correctAnswer));
+    return cons(question, correctAnswer);
   };
 
   startGame(task, gameData);

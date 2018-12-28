@@ -11,7 +11,7 @@ export default () => {
     const question = randomNum(1, 100);
     const correctAnswer = (isEven(question)) ? 'yes' : 'no';
 
-    return cons(question, String(correctAnswer));
+    return cons(question, correctAnswer);
   };
 
   startGame(task, gameData);

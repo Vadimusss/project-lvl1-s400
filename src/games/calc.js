@@ -6,7 +6,7 @@ const task = 'What is the result of the expression?';
 
 export default () => {
   const gameData = () => {
-    let correctAnswer = '';
+    let correctAnswer = 0;
     let question = '';
 
     const operandA = randomNum(1, 100);
