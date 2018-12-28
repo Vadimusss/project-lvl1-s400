@@ -3,19 +3,18 @@ import { randomNum } from '../utils';
 import startGame from '../startGame';
 
 const gcd = (first, second) => {
-  let numOne = first;
-  let numTwo = second;
+  const recursion = (greater, minor) => {
+    const residue = greater % minor;
 
-  if (numOne < numTwo) [numOne, numTwo] = [numTwo, numOne];
+    if (residue === 0) return minor;
 
-  const residue = numOne % numTwo;
-  if (residue === 0) return numTwo;
+    return recursion(minor, residue);
+  };
 
-  return gcd(numTwo, residue);
+  return (first > second) ? recursion(first, second) : recursion(second, first);
 };
 
 const task = 'Find the greatest common divisor of given numbers.';
-const countOfQuestions = 3;
 
 export default () => {
   const gameData = () => {
@@ -28,5 +27,5 @@ export default () => {
     return cons(question, String(correctAnswer));
   };
 
-  startGame(task, countOfQuestions, gameData);
+  startGame(task, gameData);
 };

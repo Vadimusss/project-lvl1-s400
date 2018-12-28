@@ -1,9 +1,14 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
-import { askName, greeting } from './utils';
+import { askName } from './utils';
 
-export default (task, countOfQuestions, gameData) => {
-  greeting(task);
+const countOfQuestions = 3;
+
+export default (task, gameData) => {
+  console.log('Welcome to the Brain Games!');
+  console.log(task);
+  console.log('');
+
   const name = askName();
 
   for (let i = 0; i < countOfQuestions; i += 1) {

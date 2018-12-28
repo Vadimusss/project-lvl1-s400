@@ -5,7 +5,6 @@ import startGame from '../startGame';
 const isEven = num => num % 2 === 0;
 
 const task = 'Answer "yes" if number even otherwise answer "no".';
-const countOfQuestions = 3;
 
 export default () => {
   const gameData = () => {
@@ -15,5 +14,5 @@ export default () => {
     return cons(question, String(correctAnswer));
   };
 
-  startGame(task, countOfQuestions, gameData);
+  startGame(task, gameData);
 };
